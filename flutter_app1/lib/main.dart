@@ -10,48 +10,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: MyLayout(),
+        appBar: AppBar(title: Text("Contoh TextField")),
+        body: TextField(
+          obscureText: false,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: 'Nama',
+          ),
+        ),
       ),
     );
   }
-}
-
-class MyLayout extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: RaisedButton(
-        child: Text('Show alert'),
-        onPressed: () {
-          showAlertDialog(context);
-        },
-      ),
-    );
-  }
-}
-
-showAlertDialog(BuildContext context) {
-// set up button
-  Widget okButton = FlatButton(
-    child: Text("OK"),
-    onPressed: () {},
-  );
-
-//set up the AlertDialog
-  AlertDialog alert = AlertDialog(
-    title: Text("My litle"),
-    content: Text("This is my message."),
-    actions: [
-      okButton,
-    ],
-  );
-
-  //show the dialog
-  showDialog(
-    context: context,
-    builder: (BuildContext context) {
-      return alert;
-    },
-  );
 }
