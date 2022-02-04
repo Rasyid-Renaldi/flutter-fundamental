@@ -11,15 +11,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text("Contoh Margin")),
+        appBar: AppBar(title: Text("Contoh Padding")),
         body: Container(
-          margin: EdgeInsets.all(50),
+          padding:EdgeInsets.only(left:20),
+          margin: EdgeInsets.all(20),
           height: 250,
           width: 250,
           alignment: Alignment.topLeft,
           color: Colors.blueGrey,
           child: Text(
-            'Semangat Belajar Flutter',
+            'Ayo Belajar Flutter',
             style: TextStyle(fontSize: 20, color: Colors.white),
           ),
         ),
