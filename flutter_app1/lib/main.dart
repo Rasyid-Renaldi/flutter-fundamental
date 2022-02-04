@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text("Contoh Alignment")),
+        appBar: AppBar(title: Text("Contoh Color")),
         body: Container(
           margin: EdgeInsets.all(50),
           height: 200,
