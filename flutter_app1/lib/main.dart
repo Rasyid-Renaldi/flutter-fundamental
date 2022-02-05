@@ -10,33 +10,50 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      // debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(title: const Text("Contoh ListView Widget"),
+        appBar: AppBar(title: const Text("Contoh GridView Widget"),
         ),
-        body: ListView(
-          children: <Widget>[
+        body: GridView.count(
+          crossAxisCount: 2,
+          children: <Widget> [
             Container(
               color: Colors.green,
-              alignment: Alignment.topLeft,
-              child: const Text("ListView widget digunanakan untuk menampilkan data dalam bentuk list dan jika datanya melebihi dari render box maka halaman tersebut dapat di scroll", 
-              style: TextStyle(
-                  fontSize: 30, 
-                  color: Colors.white
-                  ),
-                  ),
+              alignment: Alignment.center,
+              child:const Text("1", style: TextStyle(fontSize: 30, color: Colors.white)),
             ),
-            Container(
-              color: Colors.pink,
-              alignment: Alignment.topLeft,
-              child: const Text("ListView widget digunanakan untuk menampilkan data dalam bentuk list dan jika datanya melebihi dari render box maka halaman tersebut dapat di scroll", style: TextStyle(fontSize: 30, color: Colors.white)),
+            Container (
+              color: Colors.red,
+              alignment: Alignment.center,
+              child:const Text("2", style: TextStyle(fontSize: 30, color: Colors.white)),
               height: 400.0,
               width: 300.0,
             ),
             Container(
-              color: Colors.deepOrange,
-              alignment: Alignment.topLeft,
-              child: const Text("ListView widget digunanakan untuk menampilkan data dalam bentuk list dan jika datanya melebihi dari render box maka halaman tersebut dapat di scroll", style: TextStyle(fontSize: 30, color: Colors.white)),
+              color: Colors.deepPurple,
+              alignment: Alignment.center,
+              child: const Text("3", style: TextStyle(fontSize: 30, color: Colors.white)),
+              height: 200.0,
+              width: 200.0,
+            ),
+            Container(
+              color: Colors.blueGrey,
+              alignment: Alignment.center,
+              child: const Text("4", style: TextStyle(fontSize:30, color: Colors.white)),
+              height: 200.0,
+              width: 200.0,
+            ),
+             Container(
+              color: Colors.cyan[800],
+              alignment: Alignment.center,
+              child: const Text("5", style: TextStyle(fontSize:30, color: Colors.white)),
+              height: 200.0,
+              width: 200.0,
+             ),
+              Container(
+              color: Colors.yellow[800],
+              alignment: Alignment.center,
+              child: const Text("6", style: TextStyle(fontSize:30, color: Colors.white)),
               height: 200.0,
               width: 200.0,
             ),
